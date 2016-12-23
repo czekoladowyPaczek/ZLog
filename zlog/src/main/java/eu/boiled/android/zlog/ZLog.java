@@ -1,4 +1,4 @@
-package com.candy.android.zlog;
+package eu.boiled.android.zlog;
 
 import android.util.Log;
 
