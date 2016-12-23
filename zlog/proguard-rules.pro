@@ -15,3 +15,5 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class eu.boiled.android.zlog.** { *; }
+-dontwarn eu.boiled.android.zlog.**
