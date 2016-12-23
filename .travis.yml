@@ -1,0 +1,22 @@
+language: android
+sudo: false
+jdk: oraclejdk8
+android:
+  components:
+  - platform-tools
+  - tools
+  - build-tools-25.0.2
+  - android-25
+  - extra-android-m2repository
+before_script:
+- chmod +x gradlew
+- openssl aes-256-cbc -K $encrypted_dc771c3300d2_key -iv $encrypted_dc771c3300d2_iv
+  -in keystore.jks.enc -out keystore.jks -d || true
+env:
+  global:
+  - ADB_INSTALL_TIMEOUT=8
+script:
+- "./gradlew build"
+before_install:
+- openssl aes-256-cbc -K $encrypted_342b957251a9_key -iv $encrypted_342b957251a9_iv
+  -in keystore.jks.enc -out keystore.jks -d
