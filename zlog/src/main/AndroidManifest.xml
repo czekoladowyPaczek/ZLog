@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.candy.android.zlog">
+    package="eu.boiled.android.zlog">
 
     <application
         android:allowBackup="true"
