@@ -4,6 +4,15 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
+    signingConfigs {
+        release {
+            keyAlias project.hasProperty('zlog_key_alias') ? zlog_key_alias : 'dummy'
+            keyPassword project.hasProperty('zlog_key_password') ? zlog_key_password : 'dummy'
+            storeFile file('../keystore.jks').exists() ? file('../keystore.jks') : null
+            storePassword project.hasProperty('zlog_store_password') ? zlog_store_password : 'dummy'
+        }
+    }
+
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
@@ -14,6 +23,7 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
