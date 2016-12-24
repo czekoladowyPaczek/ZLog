@@ -5,15 +5,15 @@
 		"subject": "gawel"
 	},
 	"version": {
-		"name": "v1.0",
-		"desc": "Version 1.0",
-		"released": "2016-12-12",
-		"vcs_tag": "v1.0",
+		"name": "v1.1",
+		"desc": "Version 1.1",
+		"released": "2016-12-25",
+		"vcs_tag": "v1.1",
 		"attributes": [],
 		"gpgSign": false
 	},
 	"files": [{
-		"includePattern": "zlog/build/output/aar/zlog-release.aar",
+		"includePattern": "zlog/build/outputs/aar/zlog-release.aar",
 		"uploadPattern": "$1"
 	}],
 	"publish": true
