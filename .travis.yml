@@ -10,7 +10,15 @@ android:
   - extra-android-m2repository
 before_script:
 - chmod +x gradlew
-- openssl aes-256-cbc -K $encrypted_342b957251a9_key -iv $encrypted_342b957251a9_iv -in keystore.jks.enc -out keystore.jks -d || true
+- openssl aes-256-cbc -K $encrypted_342b957251a9_key -iv $encrypted_342b957251a9_iv
+  -in keystore.jks.enc -out keystore.jks -d || true
 script:
 - "./gradlew build"
-after_failure: "cat /home/travis/build/czekoladowyPaczek/ZLog/zlog/build/outputs/lint-results-debug.html"
+after_failure: cat /home/travis/build/czekoladowyPaczek/ZLog/zlog/build/outputs/lint-results-debug.html
+deploy:
+  provider: bintray
+  file: bintray.json
+  user: gawel
+  key:
+    secure: PhTqcKG237DN3L1AMJYmPkiZnLMiyptOO9Kf6IEE6CSTF2BXfpfbri0AE11n7x2z9gNusGvDaPQMLkV7Czpcvs0p2dPQNKvIi2gt8LVNHS7MkQ0/rEszckOjqK8umV+a/AEz0I64f6Ww6tWH5KaS54fEb2PXwCYH/r8OAPocHmb9Mn6YLqr6zWgVjnSlaOioJpYQF3Jr4FvJEuxFU1r2HuGNDKm7JI/4te5ZuCg/sPwQt7Sz9HLS5gkXcJQa9yaJixpbtZlCwRDfKYzCXnmiWrBQRtSW23d8xB9SW58f0HNuf9RpWN9dL6HVRqi9+OykVXHbzKzYtpZMnLjvk8bVtIZG1XleqVads3+zYrP6dXHuM9TW0JuPXMDXUXe125f1SxlEzWVM2bynWwypoPXrCrzg5XB7FIWj+2VGDT6RGpowsgsq4WP0NRmY1qLd6D7oxSkGzlKvpnJK9ycsjJI8Zx3o2XJzfeADYFz32p1GJ3heLjiR12mZBitbvKFWZUmxX9yErDJB3Mzo4NQdxYnYm4Ht7u1iGvFQIBmkFntPQ/I9hjVS1PqLuXUZSme7ukVF7OrAkUK8AxAIxhSyLmX3KD5/oIQCLq8kAgCF+wTPHtvcfISsJ4VPPSiRE0Hbmn+0g/1UETKjXOOQ/5U6FxpRsAPQbdWyZlyqdSekauT6dCE=
+  on: master

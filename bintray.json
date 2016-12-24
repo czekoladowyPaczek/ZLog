@@ -1,0 +1,20 @@
+{
+	"package": {
+		"name": "ZLog",
+		"repo": "maven",
+		"subject": "gawel"
+	},
+	"version": {
+		"name": "v1.0",
+		"desc": "Version 1.0",
+		"released": "2016-12-12",
+		"vcs_tag": "v1.0",
+		"attributes": [],
+		"gpgSign": false
+	},
+	"files": [{
+		"includePattern": "zlog/build/output/aar/zlog-release.aar",
+		"uploadPattern": "$1"
+	}],
+	"publish": true
+}
