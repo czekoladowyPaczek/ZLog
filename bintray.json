@@ -14,7 +14,7 @@
 	},
 	"files": [{
 		"includePattern": "zlog/build/outputs/aar/zlog-release.aar",
-		"uploadPattern": "$1"
+		"uploadPattern": "zlog.aar"
 	}],
 	"publish": true
 }
