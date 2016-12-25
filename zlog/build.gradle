@@ -17,8 +17,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 3
-        versionName '1.3'
+        versionCode 4
+        versionName '1.4'
 
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
@@ -34,7 +34,7 @@ android {
 
 uploadArchives {
     repositories.mavenDeployer {
-        pom.groupId = 'eu.boiled'
+        pom.groupId = 'eu.boiled.android'
         pom.artifactId = 'zlog'
         pom.version = android.defaultConfig.versionName
         repository(url: 'file:./build/outputs')
