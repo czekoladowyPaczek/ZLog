@@ -16,7 +16,7 @@ before_script:
 - openssl aes-256-cbc -K $encrypted_342b957251a9_key -iv $encrypted_342b957251a9_iv
   -in keystore.jks.enc -out keystore.jks -d || true
 script:
-- "./gradlew build"
+- "./gradlew clean check uploadArch"
 after_failure: cat /home/travis/build/czekoladowyPaczek/ZLog/zlog/build/outputs/lint-results-debug.html
 deploy:
   provider: bintray
