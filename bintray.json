@@ -16,12 +16,7 @@
     {
       "includePattern": "build/outputs/eu/boiled/zlog/zlog/(.*)/(.*\\.(aar|pom))",
       "excludePattern": ".*(md5|sha1)",
-      "uploadPattern": "$2"
-    },
-    {
-      "includePattern": "build/outputs/eu/boiled/zlog/zlog/(maven-metadata\\.xml)",
-      "excludePattern": ".*(md5|sha1)",
-      "uploadPattern": "$1"
+      "uploadPattern": "$1/$2"
     }
   ],
   "publish": true
