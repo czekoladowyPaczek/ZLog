@@ -34,7 +34,7 @@ android {
 
 uploadArchives {
     repositories.mavenDeployer {
-        pom.groupId = 'eu.boiled.android'
+        pom.groupId = 'eu.boiled.zlog'
         pom.artifactId = 'zlog'
         pom.version = android.defaultConfig.versionName
         repository(url: 'file:./build/outputs')
