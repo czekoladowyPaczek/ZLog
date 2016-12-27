@@ -14,7 +14,7 @@
   },
   "files": [
     {
-      "includePattern": "build/outputs/eu/boiled/zlog/zlog/(.*)/(.*\\.(aar|pom))",
+      "includePattern": "build/outputs/eu/boiled/zlog/zlog/(.*)/(.*\\.(aar|pom|jar))",
       "excludePattern": ".*(md5|sha1)",
       "uploadPattern": "eu/boiled/zlog/zlog/$1/$2"
     }
