@@ -5,10 +5,10 @@
     "subject": "gawel"
   },
   "version": {
-    "name": "1.4",
-    "desc": "Version 1.4",
-    "released": "2016-12-25",
-    "vcs_tag": "v1.4",
+    "name": "1.5",
+    "desc": "Version 1.5",
+    "released": "2017-03-24",
+    "vcs_tag": "v1.5",
     "attributes": [],
     "gpgSign": false
   },
