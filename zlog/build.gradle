@@ -42,7 +42,7 @@ uploadArchives {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    testCompile 'org.robolectric:robolectric:3.1.4'
+    testCompile 'org.robolectric:robolectric:3.3.1'
 }
 
 task sourcesJar(type: Jar) {
@@ -55,12 +55,8 @@ task javadoc(type: Javadoc) {
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
+task javadocJar(type: Jar) {
+    dependsOn javadoc
     classifier = 'javadoc'
     from javadoc.getDestinationDir()
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
 }
